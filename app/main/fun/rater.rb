@@ -7,7 +7,8 @@ module Bot::Fun::Rater
 
   include Constants
 
-  command :rate do |event, *args|
+  command :rate, description: "Rates what it is given on a scale from 0 to 10.",
+                 usage: "+rate [phrase/user mention]" do |event, *args|
     # Break unless arguments are given
     break unless args.size > 0
 
