@@ -1,11 +1,12 @@
 # Crystal: Miscellaneous::Information
 
 
-# TODO Write what the crystal does here.
+# Contains commands related to the bot's information.
 module Bot::Miscellaneous::Information
   extend Discordrb::Commands::CommandContainer
   
-  command :source do |event|
+  command :source, description: "Returns the bot's source on github and relevant libraries.",
+                   usage:       "+source" do |event|
     event.send_embed do |embed|
       embed.description = <<~DESC.strip
         Darla is a Discord bot made in the [Ruby](https://www.ruby-lang.org/en/) language.
