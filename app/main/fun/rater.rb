@@ -5,8 +5,6 @@
 module Bot::Fun::Rater
   extend Discordrb::Commands::CommandContainer
 
-  include Constants
-
   command :rate, description: "Rates what it is given on a scale from 0 to 10.",
                  usage: "+rate [phrase/user mention]" do |event, *args|
     # Break unless arguments are given
