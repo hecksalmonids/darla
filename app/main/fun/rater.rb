@@ -21,6 +21,6 @@ module Bot::Fun::Rater
     end
 
     # Return rating
-    event << "I rate **#{text}** a **#{rng.rand(10)}/10**."
+    event << "I rate **#{text}** a **#{rng.rand(0..10)}/10**."
   end
 end
